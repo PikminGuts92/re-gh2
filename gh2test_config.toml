@@ -28583,9 +28583,3 @@ longjmp_address = 0x82690A40
 0x8270FCD0 = { name = "rex_sub_8270FCD0", size = 0xC4CC }
 0x8271C1A0 = { name = "rex_sub_8271C1A0", size = 0x1490 }
 0x8271D630 = { name = "rex_sub_8271D630", size = 0x5BEC }
-
-[[midasm_hook]]
-address = 0x82276780
-name = "NewFileHook"
-registers = ["r3", "r4"]
-after_instruction = false
