@@ -14,7 +14,6 @@ include(generated/rexglue.cmake)
 set(GH2TEST_SOURCES
     src/main.cpp
     src/arkless.cpp
-    src/gh2test_app.h
 )
 
 if(WIN32)
