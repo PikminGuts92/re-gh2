@@ -1,0 +1,14 @@
+[project]
+sdk_version = "0.8.0"
+name = "gh2test"
+
+[entrypoint]
+file_path = "assets/default.xex"
+out_directory_path = "generated"
+includes = [
+  "gh2test_config.toml",
+]
+
+setjmp_address = 0x82690C90
+longjmp_address = 0x82690A40
+
