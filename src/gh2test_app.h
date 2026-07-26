@@ -18,9 +18,16 @@ class Gh2testApp : public rex::ReXApp {
   }
 
   // Override virtual hooks for customization:
-  // void OnPreSetup(rex::RuntimeConfig& config) override {}
+  void OnPreSetup(rex::RuntimeConfig& config) override {
+    //auto graphics = config.graphics.get();
+    REXLOG_INFO("HELLO!!!\n");
+  }
+
   // void OnLoadXexImage(std::string& xex_image) override {}
-  // void OnPostSetup() override {}
+  void OnPostSetup() override {
+    REXLOG_INFO("HELLO POSTY!!!\n");
+
+  }
   // void OnCreateDialogs(rex::ui::ImGuiDrawer* drawer) override {}
   // void OnShutdown() override {}
   // void OnConfigurePaths(rex::PathConfig& paths) override {}
