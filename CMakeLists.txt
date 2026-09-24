@@ -11,10 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(generated/rexglue.cmake)
 
 # Sources
-set(GH2TEST_SOURCES
-    src/main.cpp
-    src/arkless.cpp
-)
+file(GLOB_RECURSE GH2TEST_SOURCES src/*.cpp)
 
 if(WIN32)
     add_executable(gh2test WIN32 ${GH2TEST_SOURCES})
