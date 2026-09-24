@@ -1,3 +1,9 @@
+[rexcrt]
+# Memory
+memcpy                  = 0x8239CB70
+memmove                 = 0x8239D4F0
+memset                  = 0x8239CA70
+
 [functions]
 0x82274978 = { name = "rex_sub_82274978", size = 0x64  }
 0x826A18D8 = { name = "rex_sub_826A18D8", size = 0x8  }
