@@ -5,14 +5,19 @@
 
 #pragma once
 
+#include <rex/logging.h>
 #include <rex/rex_app.h>
 
 class Gh2testApp : public rex::ReXApp {
  public:
   using rex::ReXApp::ReXApp;
 
-  static std::unique_ptr<rex::ui::WindowedApp> Create(
-      rex::ui::WindowedAppContext& ctx) {
+  static std::unique_ptr<rex::ui::WindowedApp> Create(rex::ui::WindowedAppContext& ctx) {
+    rex::LogConfig config;
+    config.default_level = spdlog::level::info;
+    config.log_to_console = true;
+    rex::InitLogging(config);
+
     return std::unique_ptr<Gh2testApp>(new Gh2testApp(ctx, "gh2test",
         PPCImageConfig));
   }
