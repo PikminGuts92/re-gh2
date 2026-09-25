@@ -4,11 +4,13 @@ name = "gh2test"
 
 [entrypoint]
 file_path = "assets/default.xex"
+#file_path = "assets/default.xex"
+#patch_file_path = "assets/default.xexp"
+#patched_file_path = "assets/default_patched.xex"
 out_directory_path = "generated"
 includes = [
   "gh2test_config.toml",
 ]
 
-setjmp_address = 0x82690C90
-longjmp_address = 0x82690A40
-
+setjmp_address = 0x826A7300
+longjmp_address = 0x826A70B0

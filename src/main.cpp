@@ -7,3 +7,9 @@
 #include "gh2test_app.h"
 
 REX_DEFINE_APP(gh2test, Gh2testApp::Create)
+
+//REX_STUB(__imp__XamShowGamerCardUIForXUID)
+//REX_STUB(__imp__XamShowMarketplaceUI)
+//REX_STUB(__imp__XamUserCreateStatsEnumerator)
+//REX_STUB(__imp__NetDll_getsockname)
+//REX_STUB(__imp__NetDll_getpeername)
