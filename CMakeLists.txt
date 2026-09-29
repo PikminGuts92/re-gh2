@@ -19,5 +19,5 @@ else()
     add_executable(gh2test ${GH2TEST_SOURCES})
 endif()
 
-rexglue_setup_target(gh2test)
+rexglue_setup_target(gh2test GPU_PLUGINS xenos)
 

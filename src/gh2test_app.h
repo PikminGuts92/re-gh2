@@ -13,6 +13,8 @@ class Gh2testApp : public rex::ReXApp {
   using rex::ReXApp::ReXApp;
 
   static std::unique_ptr<rex::ui::WindowedApp> Create(rex::ui::WindowedAppContext& ctx) {
+    rex::cvar::SetFlagByName("gpu_plugin", "xenos"); // Otherwise defaults to no gpu renderer and displays nothing
+
     rex::LogConfig config;
     config.default_level = spdlog::level::info;
     config.log_to_console = true;

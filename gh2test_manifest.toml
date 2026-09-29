@@ -1,12 +1,9 @@
 [project]
-sdk_version = "0.8.0"
+sdk_version = "0.9.0"
 name = "gh2test"
 
 [entrypoint]
 file_path = "assets/default.xex"
-#file_path = "assets/default.xex"
-#patch_file_path = "assets/default.xexp"
-#patched_file_path = "assets/default_patched.xex"
 out_directory_path = "generated"
 includes = [
   "gh2test_config.toml",
