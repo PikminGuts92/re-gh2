@@ -4086,7 +4086,7 @@ memset                  = 0x8239CA70
 0x8218E378 = { name = "rex_sub_8218E378", size = 0x78 }
 0x8218E3F0 = { name = "rex_sub_8218E3F0", size = 0x80 }
 0x8218E470 = { name = "rex_sub_8218E470", size = 0x50 }
-0x8218E4C0 = { name = "rex_sub_8218E4C0", size = 0x5C }
+0x8218E4C0 = { name = "MakeString_2StringArgs", size = 0x5C }
 0x8218E520 = { name = "rex_sub_8218E520", size = 0x58 }
 0x8218E578 = { name = "rex_sub_8218E578", size = 0x64 }
 0x8218E5E0 = { name = "rex_sub_8218E5E0", size = 0x64 }
@@ -11157,10 +11157,10 @@ memset                  = 0x8239CA70
 0x82275C60 = { name = "rex_sub_82275C60", size = 0x60 }
 0x82275CC0 = { name = "rex_sub_82275CC0", size = 0x44 }
 0x82275D08 = { name = "rex_sub_82275D08", size = 0x60 }
-0x82275D68 = { name = "rex_sub_82275D68", size = 0xB8 }
+0x82275D68 = { name = "FileGetBase", size = 0xB8 }
 0x82275E20 = { name = "rex_sub_82275E20", size = 0x6C }
 0x82275E90 = { name = "rex_sub_82275E90", size = 0x5C }
-0x82275EF0 = { name = "rex_sub_82275EF0", size = 0xC0 }
+0x82275EF0 = { name = "FileGetPath", size = 0xC0 }
 0x82275FB0 = { name = "rex_sub_82275FB0", size = 0x98 }
 0x82276048 = { name = "rex_sub_82276048", size = 0x1E4 }
 0x82276230 = { name = "rex_sub_82276230", size = 0x64 }
@@ -11415,10 +11415,10 @@ memset                  = 0x8239CA70
 0x8227D700 = { name = "rex_sub_8227D700", size = 0x1BC }
 0x8227D8C0 = { name = "rex_sub_8227D8C0", size = 0x11C }
 0x8227D9E0 = { name = "rex_sub_8227D9E0", size = 0xE0 }
-0x8227DAC8 = { name = "rex_sub_8227DAC8", size = 0xF4 }
+0x8227DAC8 = { name = "AsyncFile__New", size = 0xF4 }
 0x8227DBBC = { name = "rex_sub_8227DBBC", size = 0x28 }
 0x8227DBE4 = { name = "rex_sub_8227DBE4", size = 0x28 }
-0x8227DC18 = { name = "rex_sub_8227DC18", size = 0xC0 }
+0x8227DC18 = { name = "ArkFile__ArkFile", size = 0xC0 }
 0x8227DCD8 = { name = "rex_sub_8227DCD8", size = 0x28 }
 0x8227DD00 = { name = "rex_sub_8227DD00", size = 0x2C }
 0x8227DD38 = { name = "rex_sub_8227DD38", size = 0x74 }
@@ -16795,7 +16795,7 @@ memset                  = 0x8239CA70
 0x8231C43C = { name = "rex_sub_8231C43C", size = 0x28 }
 0x8231C470 = { name = "rex_sub_8231C470", size = 0x7C }
 0x8231C4EC = { name = "rex_sub_8231C4EC", size = 0x28 }
-0x8231C520 = { name = "rex_sub_8231C520", size = 0x114 }
+0x8231C520 = { name = "DataReadFile", size = 0x114 }
 0x8231C634 = { name = "rex_sub_8231C634", size = 0x28 }
 0x8231C660 = { name = "rex_sub_8231C660", size = 0xD4 }
 0x8231C738 = { name = "rex_sub_8231C738", size = 0x74 }
@@ -18720,7 +18720,7 @@ memset                  = 0x8239CA70
 0x82357918 = { name = "rex_sub_82357918", size = 0x3C }
 0x82357958 = { name = "rex_sub_82357958", size = 0x5C }
 0x823579B8 = { name = "rex_sub_823579B8", size = 0x4C }
-0x82357A10 = { name = "rex_sub_82357A10", size = 0x9C }
+0x82357A10 = { name = "FileStream__FileStream", size = 0x9C }
 0x82357AAC = { name = "rex_sub_82357AAC", size = 0x28 }
 0x82357AD4 = { name = "rex_sub_82357AD4", size = 0x2C }
 0x82357B08 = { name = "rex_sub_82357B08", size = 0x74 }
