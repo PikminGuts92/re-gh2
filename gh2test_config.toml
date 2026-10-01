@@ -18732,7 +18732,7 @@ memset                  = 0x8239CA70
 0x82357C98 = { name = "rex_sub_82357C98", size = 0x74 }
 0x82357D10 = { name = "rex_sub_82357D10", size = 0x14 }
 0x82357D28 = { name = "rex_sub_82357D28", size = 0x14 }
-0x82357D40 = { name = "rex_sub_82357D40", size = 0x8 }
+0x82357D40 = { name = "FileStream__Fail", size = 0x8 }
 0x82357D48 = { name = "rex_sub_82357D48", size = 0x4C }
 0x82357D98 = { name = "rex_sub_82357D98", size = 0x44 }
 0x82357DE0 = { name = "rex_sub_82357DE0", size = 0x64 }
@@ -30400,3 +30400,11 @@ address = 0x822CFAC0
 name = "AudioOffsetHook"
 registers = ["f1"]
 after_instruction = true
+
+# Inside "DataReadFile"
+[[midasm_hook]]
+address = 0x8231C550
+name = "SkipReadCachedDTB"
+registers = ["r3"]
+after_instruction = false
+jump_address_on_true = 0x8231C56C
