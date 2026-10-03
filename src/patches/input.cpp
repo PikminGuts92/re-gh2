@@ -2,16 +2,11 @@
 #include <rex/cvar.h>
 #include "constants.h"
 
-REXCVAR_DEFINE_DOUBLE(audio_offset, 0.0, GAME_SETTINGS_CATEGORY, "Offset song audio to sync with notes");
+REXCVAR_DEFINE_BOOL(force_guitar, false, GAME_SETTINGS_CATEGORY, "Force guitar input");
 
-void AudioOffsetHook(PPCRegister& f1) {
-    double offset = static_cast<double>(REXCVAR_GET(audio_offset));
-    f1.f64 += offset;
-}
-
-void AudioOffsetHookPractice(PPCRegister& f1) {
-    double offset = static_cast<double>(REXCVAR_GET(audio_offset));
-    double newpos = f1.f64 + offset;
-    if (newpos < 0) return;
-    else f1.f64 = newpos;
+void GuitarHook(PPCRegister& r11) {
+    bool force_guitar = static_cast<bool>(REXCVAR_GET(force_guitar));
+    if (force_guitar) {
+        r11.u64 = 7;
+    }
 }
