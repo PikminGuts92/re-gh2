@@ -11,7 +11,7 @@ memset                  = 0x8239CA70
 0x82120090 = { name = "rex_sub_82120090", size = 0xB4 }
 0x82120148 = { name = "rex_sub_82120148", size = 0x68 }
 0x821201B0 = { name = "rex_sub_821201B0", size = 0x4C }
-0x82120208 = { name = "rex_sub_82120208", size = 0x3E8 }
+0x82120208 = { name = "App__App", size = 0x3E8 }
 0x821205F0 = { name = "rex_sub_821205F0", size = 0x28 }
 0x82120618 = { name = "rex_sub_82120618", size = 0x28 }
 0x82120640 = { name = "rex_sub_82120640", size = 0x28 }
@@ -12675,7 +12675,7 @@ memset                  = 0x8239CA70
 0x822A14E8 = { name = "rex_sub_822A14E8", size = 0xF4 }
 0x822A15DC = { name = "rex_sub_822A15DC", size = 0x28 }
 0x822A1604 = { name = "rex_sub_822A1604", size = 0x28 }
-0x822A1630 = { name = "rex_sub_822A1630", size = 0x78 }
+0x822A1630 = { name = "MetaPanel__OnPlayMovie", size = 0x78 }
 0x822A16B0 = { name = "rex_sub_822A16B0", size = 0x16C }
 0x822A181C = { name = "rex_sub_822A181C", size = 0x28 }
 0x822A1850 = { name = "rex_sub_822A1850", size = 0x258 }
@@ -30408,3 +30408,40 @@ name = "SkipReadCachedDTB"
 registers = ["r3"]
 after_instruction = false
 jump_address_on_true = 0x8231C56C
+
+[[midasm_hook]]
+address = 0x82120374
+name = "SetSplashWaitTime"
+registers = ["f30"]
+after_instruction = true
+
+# 821202d0 821203e8 821204dc
+# pub (ro), activision, hmx
+
+[[midasm_hook]]
+address = 0x821202D0
+name = "SkipRedOctaneLogo"
+registers = []
+after_instruction = false
+jump_address_on_true = 0x821202D4
+
+[[midasm_hook]]
+address = 0x821203E8
+name = "SkipActivisionLogo"
+registers = []
+after_instruction = false
+jump_address_on_true = 0x821203EC
+
+[[midasm_hook]]
+address = 0x821204DC
+name = "SkipHarmonixLogo"
+registers = []
+after_instruction = false
+jump_address_on_true = 0x821204E0
+
+[[midasm_hook]]
+address = 0x822A1630
+name = "MetaPanelOnPlayMovie"
+registers = ["r3"]
+after_instruction = false
+return_on_true = true
