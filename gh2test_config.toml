@@ -11409,7 +11409,7 @@ memset                  = 0x8239CA70
 0x8227D5B0 = { name = "rex_sub_8227D5B0", size = 0x60 }
 0x8227D610 = { name = "rex_sub_8227D610", size = 0x1C }
 0x8227D630 = { name = "rex_sub_8227D630", size = 0x8 }
-0x8227D638 = { name = "rex_sub_8227D638", size = 0x8 }
+0x8227D638 = { name = "PlayerConfig__GetDifficulty", size = 0x8 }
 0x8227D640 = { name = "rex_sub_8227D640", size = 0x8 }
 0x8227D648 = { name = "rex_sub_8227D648", size = 0xB8 }
 0x8227D700 = { name = "rex_sub_8227D700", size = 0x1BC }
@@ -18798,7 +18798,7 @@ memset                  = 0x8239CA70
 0x82359510 = { name = "rex_sub_82359510", size = 0x68 }
 0x82359578 = { name = "rex_sub_82359578", size = 0x68 }
 0x823595E0 = { name = "rex_sub_823595E0", size = 0x58 }
-0x82359638 = { name = "BinStream__operator>>", size = 0x48 }
+0x82359638 = { name = "BinStream__operator__gtgt", size = 0x48 }
 0x82359680 = { name = "rex_sub_82359680", size = 0x5C }
 0x823596E8 = { name = "rex_sub_823596E8", size = 0x64 }
 0x8235974C = { name = "rex_sub_8235974C", size = 0x28 }
@@ -19024,7 +19024,7 @@ memset                  = 0x8239CA70
 0x8235F678 = { name = "ChunckStream__Eof", size = 0x2D0 }
 0x8235F948 = { name = "rex_sub_8235F948", size = 0xB0 }
 0x8235F9F8 = { name = "rex_sub_8235F9F8", size = 0x58 }
-0x8235FA58 = { name = "ChunkStream__~ChunkStream", size = 0x1B8 }
+0x8235FA58 = { name = "ChunkStream__ChunkStream__Destructor", size = 0x1B8 }
 0x8235FC10 = { name = "rex_sub_8235FC10", size = 0x28 }
 0x8235FC38 = { name = "rex_sub_8235FC38", size = 0x2C }
 0x8235FC68 = { name = "rex_sub_8235FC68", size = 0x4C }
@@ -20987,7 +20987,7 @@ memset                  = 0x8239CA70
 0x82391830 = { name = "rex_sub_82391830", size = 0x8 }
 0x82391838 = { name = "rex_sub_82391838", size = 0x8 }
 0x82391840 = { name = "rex_sub_82391840", size = 0x8 }
-0x82391848 = { name = "rex_sub_82391848", size = 0x8 }
+0x82391848 = { name = "TrackConfig__SetGemSpacing", size = 0x8 }
 0x82391850 = { name = "rex_sub_82391850", size = 0x8 }
 0x82391858 = { name = "rex_sub_82391858", size = 0xC }
 0x82391868 = { name = "rex_sub_82391868", size = 0x64 }
@@ -28429,7 +28429,7 @@ memset                  = 0x8239CA70
 0x826931B0 = { name = "rex_sub_826931B0", size = 0x64 }
 0x82693218 = { name = "rex_sub_82693218", size = 0x54 }
 0x82693270 = { name = "rex_sub_82693270", size = 0x54 }
-0x826932D0 = { name = "rex_sub_826932D0", size = 0x1C4 }
+0x826932D0 = { name = "TrackPanel__CreateTracks", size = 0x1C4 }
 0x82693494 = { name = "rex_sub_82693494", size = 0x28 }
 0x826934C0 = { name = "rex_sub_826934C0", size = 0x44 }
 0x82693508 = { name = "rex_sub_82693508", size = 0x54 }
@@ -28536,7 +28536,7 @@ memset                  = 0x8239CA70
 0x826965F0 = { name = "rex_sub_826965F0", size = 0xFC }
 0x826966F0 = { name = "rex_sub_826966F0", size = 0x64 }
 0x82696758 = { name = "rex_sub_82696758", size = 0x54 }
-0x826967B8 = { name = "rex_sub_826967B8", size = 0x708 }
+0x826967B8 = { name = "Track__Track", size = 0x708 }
 0x82696EC0 = { name = "rex_sub_82696EC0", size = 0x28 }
 0x82696EE8 = { name = "rex_sub_82696EE8", size = 0x2C }
 0x82696F14 = { name = "rex_sub_82696F14", size = 0x28 }
@@ -30415,9 +30415,6 @@ name = "SetSplashWaitTime"
 registers = ["f30"]
 after_instruction = true
 
-# 821202d0 821203e8 821204dc
-# pub (ro), activision, hmx
-
 [[midasm_hook]]
 address = 0x821202D0
 name = "SkipRedOctaneLogo"
@@ -30445,3 +30442,15 @@ name = "MetaPanelOnPlayMovie"
 registers = ["r3"]
 after_instruction = false
 return_on_true = true
+
+[[midasm_hook]]
+address = 0x82696AA4
+name = "ForceHyperspeed"
+registers = ["r3"]
+after_instruction = false
+
+[[midasm_hook]]
+address = 0x82696ACC
+name = "HyperspeedScale"
+registers = ["f0", "f31"]
+after_instruction = true
